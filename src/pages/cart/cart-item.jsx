@@ -7,13 +7,15 @@ export const CartItem = (props) => {
     useContext(ShopContext);
 
   return (
-    <div className="cartItem">
-      <img src={productImage} />
+    <div className="cartItem" style={{backgroundColor:'#F8F1E9'}}>
+      <div >
+      <img src={productImage} style={{marginRight:'80px'}}/>
+      </div>
       <div className="description">
         <p>
           <b>{productName}</b>
         </p>
-        <p> Price: ${price}</p>
+        <p style={{marginLeft:'60px',fontSize:'25px'}}> Price: ${price}</p>
         <div className="countHandler">
           <button onClick={() => removeFromCart(id)}> - </button>
           <input
